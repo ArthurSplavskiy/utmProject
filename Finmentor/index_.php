@@ -361,11 +361,11 @@
                         value=""><br>
                     <input type="text" class="input email-input" maxlength="60" placeholder="Введите ваш email" name="formParams[email]"
                         value=""><br>
-                    <input name="formParams[userCustomFields][426234]" type="hidden"><br>
-                    <input name="formParams[userCustomFields][429796]" type="hidden"><br>
-                    <input name="formParams[userCustomFields][429797]" type="hidden"><br>
-                    <input name="formParams[userCustomFields][429798]" type="hidden"><br>
-                    <input name="formParams[userCustomFields][429799]" type="hidden"><br>
+                        <input name="formParams[userCustomFields][426234]" type="hidden" value="<?php echo $_GET['utm_source'] ?>"><br>
+                        <input name="formParams[userCustomFields][429796]" type="hidden" value="<?php echo $_GET['utm_medium'] ?>"><br>
+                        <input name="formParams[userCustomFields][429797]" type="hidden" value="<?php echo $_GET['utm_campaign'] ?>"><br>
+                        <input name="formParams[userCustomFields][429798]" type="hidden" value="<?php echo $_GET['utm_content'] ?>"><br>
+                        <input name="formParams[userCustomFields][429799]" type="hidden" value="<?php echo $_GET['utm_term'] ?>"><br>
                     <button class="form-button" type="submit" id="button6535579"
                         style="color: #ffffff; background-color: #f59634; border-radius: 23px !important; "
                         onclick="if(window['btnprs5f69dd9549411']){return false;}window['btnprs5f69dd9549411']=true;setTimeout(function(){window['btnprs5f69dd9549411']=false},6000);return true;">
