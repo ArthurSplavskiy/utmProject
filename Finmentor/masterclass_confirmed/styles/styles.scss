@@ -1,0 +1,328 @@
+@import 'vars';
+@import 'bootstrap/bootstrap';
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url('../fonts/Montserrat-ExtraLight.otf');
+}
+
+ul,ol{
+  margin: 0;
+  padding: 0;
+}
+* {
+   outline: none !important;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.congratulation {
+  width: 100%;
+  background-image: url(../images/congratulation_bg.png);
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  &-wrap {
+    height: 100vh;
+    min-height: 500px;
+    position: relative;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: 15px;
+    @include media-breakpoint-down(xl) {
+      padding: 19px 154px 120px 66px;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 25px 50px;
+    }
+    @include media-breakpoint-down(md) {
+      height: auto;
+      padding-bottom: 0;
+      min-height: auto;
+    }
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 20px 20px 0 20px;
+    }
+  }
+  &-top {
+    margin-bottom: 10px;
+    @include media-breakpoint-down(xs) {
+      padding-bottom: 26px;
+    }
+  }
+  &-logo {
+    margin-right: 60px;
+    @include media-breakpoint-down(xs) {
+      margin-right: 30px;
+    }
+  }
+  &-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+    @include media-breakpoint-down(lg) {
+      min-height: 500px;
+    }
+    @include media-breakpoint-down(md) {
+      display: block;
+      height: auto;
+      min-height: auto;
+    }
+  }
+  &-master {
+    color: #898899;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+    position: relative;
+    @include media-breakpoint-down(xs) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      height: 65px;
+      width: 1px;
+      background-color: rgba(#ffffff, 0.2);
+      top: -4px;
+      left: -31px;
+      @include media-breakpoint-down(xs) {
+        left: -18px;
+      }
+    }
+  }
+  &-reg {
+    padding: 110px 0 130px 90px;
+    background: linear-gradient(to bottom, rgba(34,33,40,0.05) 0%,rgba(34,33,40,0) 100%);
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    @include media-breakpoint-down(xl) {
+      padding: 60px 0 60px 60px;
+      z-index: 10;
+    }
+    @include media-breakpoint-down(lg) {
+      padding: 60px 0 70px 60px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding: 40px;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 30px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, rgba(222,177,111,1) 0%,rgba(222,177,111,0.46) 38%,rgba(222,177,111,0) 71%);
+      top: 0;
+      left: 0;
+      @include media-breakpoint-down(xl) {
+        background: linear-gradient(to right, #deb16f 0%, rgba(222, 177, 111, 0.58) 20%, rgba(222, 177, 111, 0) 64%);
+      }
+      @include media-breakpoint-down(md) {
+        background: linear-gradient(to right, #deb16f 0%, rgba(222, 177, 111, 0.58) 20%, rgba(222, 177, 111, 0) 95%);
+      }
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 10px;
+      background: linear-gradient(to right, #deb16f 0%, rgba(222, 177, 111, 0.58) 20%, rgba(222, 177, 111, 0) 60%);
+      bottom: 0;
+      left: 0;
+      @include media-breakpoint-down(xl) {
+        background: linear-gradient(to right, #deb16f 0%, rgba(222, 177, 111, 0.58) 20%, rgba(222, 177, 111, 0) 41%);
+      }
+      @include media-breakpoint-down(lg) {
+        background: linear-gradient(to right, #deb16f 0%, rgba(222, 177, 111, 0.58) 20%, rgba(222, 177, 111, 0) 48%);
+      }
+      @include media-breakpoint-down(md) {
+        background: linear-gradient(to right, #deb16f 0%, rgba(222, 177, 111, 0.58) 20%, rgba(222, 177, 111, 0) 95%);
+      }
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+  }
+  &-border {
+    position: absolute;
+    height: 100%;
+    width: 10px;
+    background-color: #deb16f;
+    left: 0;
+    top: 0;
+    @include media-breakpoint-down(sm) {
+      background: linear-gradient(to bottom, #deb16f 0%, rgba(222, 177, 111, 0.46) 38%, rgba(222, 177, 111, 0) 100%);
+    }
+  }
+  &-text {
+    color: #deb16f;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 74px;
+    text-transform: uppercase;
+    padding-bottom: 64px;
+    @include media-breakpoint-down(xl) {
+      font-size: 55px;
+      line-height: 70px;
+      padding-bottom: 30px;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 45px;
+      line-height: 1.4;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 30px;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 36px;
+      text-align: center;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 25px;
+      padding-bottom: 28px;
+      text-align: center;
+    }
+  }
+  &-step {
+    color: #ffffff;
+    font-family: "Montserrat-SemiBold", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 44px;
+    padding: 25px 20px;
+    background-color: rgba(#ffffff, 0.05);
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 21px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 10px solid rgba(#ffffff, 0.05);
+      border-right: 10px solid transparent;
+      left: 0;
+      bottom: -10px;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 26px;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 15px 35px;
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+      display: block;
+      padding: 15px;
+      margin: 0;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 22px;
+      line-height: 26px;
+      padding: 10px;
+      text-align: center;
+      display: block;
+    }
+  }
+  &-go {
+    color: #ffffff;
+    font-family: "Montserrat-ExtraLight", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 44px;
+    @include media-breakpoint-down(xxl) {
+      display: block;
+    }
+    @include media-breakpoint-down(xl) {
+      padding: 20px;
+      background-color: rgba(#222128, 0.5);
+      display: inline-block;
+    }
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
+    @include media-breakpoint-down(md) {
+      font-size: 23px;
+      line-height: 37px;
+      background-color: transparent;
+      padding: 0;
+      width: 100%;
+    }
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: 22px;
+      line-height: 37px;
+      text-align: center;
+    }
+  }
+  &-link {
+    color: #deb16f;
+    font-family: "Montserrat-Semi Bold", sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    transition: all .5s ease;
+    &:hover {
+      color: darken(#deb16f, 10%);
+      text-decoration: none;
+    }
+  }
+  &-portrait {
+    position: absolute;
+    bottom: 0;
+    @include media-breakpoint-down(xxl) {
+      right: -331px;
+      width: 60%;
+    }
+    @include media-breakpoint-down(xl) {
+      max-width: 540px;
+      right: 60px;
+    }
+    @include media-breakpoint-down(lg) {
+      max-width: 440px;
+      right: 30px;
+    }
+    @include media-breakpoint-down(md) {
+      position: static;
+      text-align: center;
+      margin: 20px auto 0;
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}
